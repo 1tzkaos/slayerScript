@@ -22,7 +22,7 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 ## Settings
 
 3 Different slayer modes: 
-- 0 = No slayers, just xp 
+- 0 = No slayers, just xp (Crypt Ghouls)
 - 1 = Revenent Horrors (best xp)
 - 2 = Svens
 
