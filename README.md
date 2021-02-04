@@ -9,7 +9,7 @@
  
  
 # Description
-
+This script uses Entity Iterator paired with baritone to find mobs, pathfind, and kill them. The script requires MVP+.
 # Installation
 💾 
 Downlaod and unzip the folder, place the 'macros' folder into an instance.
