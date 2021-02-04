@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gui xmlns:gb="http://eq2online.net/macros/guibinding" xmlns:gc="http://eq2online.net/macros/guiconfiguration">
+    <!-- GUI slot bindings -->
+    <gb:bindings>
+        <gb:binding bottom="0" left="0" right="0" slot="inchat" top="0">inchat</gb:binding>
+        <gb:binding bottom="0" left="0" right="0" slot="playback" top="0">default</gb:binding>
+        <gb:binding bottom="0" left="0" right="0" slot="scoreboard" top="0">ingame</gb:binding>
+        <gb:binding bottom="35" left="2" right="2" slot="ingame" top="14">default</gb:binding>
+        <gb:binding bottom="0" left="0" right="0" slot="indebug" top="0">ingame</gb:binding>
+    </gb:bindings>
+    <!-- Config for layout 'default' -->
+    <gc:guilayout columns="6" display="Cane" dots="false" grid="false" name="default" padding="2" rows="10">
+        <gc:controls>
+            <gc:label id="257" name="LABEL 257" x="0" y="2">
+                <align>top left</align>
+                <background>#01000000</background>
+                <binding/>
+                <border>0</border>
+                <colour>#919191</colour>
+                <shadow>1</shadow>
+                <text> Running for 8 minutes</text>
+                <visible>1</visible>
+            </gc:label>
+            <gc:label id="258" name="LABEL 259" x="0" y="4">
+                <align>middle left</align>
+                <background>#01000000</background>
+                <binding/>
+                <border>0</border>
+                <colour>#00FF00</colour>
+                <shadow>1</shadow>
+                <text>&amp;7XP per kill: &amp;d0\n&amp;7Current XP: &amp;d0,0\n&amp;7Total XP for next level: &amp;d0,000</text>
+                <visible>1</visible>
+            </gc:label>
+        </gc:controls>
+    </gc:guilayout>
+    <!-- Config for layout 'inchat' -->
+    <gc:guilayout columns="6" display="inchat" dots="false" grid="false" name="inchat" padding="2" rows="10">
+        <gc:controls/>
+    </gc:guilayout>
+    <!-- Config for layout 'ingame' -->
+    <gc:guilayout columns="2" display="ingame" dots="false" grid="false" name="ingame" padding="1" rows="4">
+        <gc:metrics>
+            <gc:column id="0" width="324"/>
+        </gc:metrics>
+        <gc:controls>
+            <gc:textarea id="256" name="debug" rowspan="4" x="1" y="0">
+                <colour>FF00FF00</colour>
+                <lifespan>200</lifespan>
+                <visible>1</visible>
+            </gc:textarea>
+        </gc:controls>
+    </gc:guilayout>
+</gui>

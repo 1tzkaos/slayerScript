@@ -1,0 +1,88 @@
+
+do()
+log("&8[&7&ka&bLobby Check&7&ka&8] &7Checking lobby...")
+
+set(@#playernum,0)
+foreach(players)
+	inc(@#playernum)  
+next;
+wait(3)
+log("&8[&7&ka&bLobby Check&7&ka&8] &7%@#playernum% players in lobby")
+if(%@#playernum% > 8)
+baritone(cancel);
+STOP("checkhub")
+stop("slayer")
+do()
+	log("&8[&7&ka&4Lobby Check&7&ka&8] &7Lobby Unsafe!")
+	inc(@#restarts,1);
+	log("&8[&7&ka&3Restarts&7&ka&8] &7%@#restarts%")
+	set(@&lastrestart,%DATE% %TIME%);
+	stop("slayer")
+	baritone(cancel);
+	exec("anticombat.txt","anticombat")
+	baritone(cancel);
+	wait(10t)
+	do()
+		stop("slayer")
+		echo(/hub)
+		baritone(cancel);
+		wait(3)
+	until(%YPOS% = 70)
+	stop("anticombat")
+	baritone(cancel);
+		goto(-10,70,-68)
+
+	next;
+	do()			
+		if((%XPOS% < -9)&&(%YPOS% = 70)&&(%ZPOS% < -66))
+		do()
+		look(220,0)
+		until(%HITID% = -1)					
+		    if(%HITID% = -1)
+		        do()
+		        key(use)
+		        until(GUI = "GUICHEST")
+		    endif; 
+
+		        if(GUI = "GUICHEST")
+		            wait(10t)
+		            slotclick(50,RMB);
+		            wait(10t)
+				    wait(1)
+				    echo(/warp crypt)
+				    stop("slayer")
+				    wait(1)		            
+		        endif
+
+		            
+						set(@#playernum1,0)
+						foreach(players)
+							inc(@#playernum1)  
+						next;
+						wait(5)
+						if(%@#playernum1% > 8)
+							exec("lcrestart.txt","restart")
+							stop();
+						else
+				            exec("slayer.txt","slayer")
+				            exec("checkhub.txt","checkhub")
+				        endif;
+		            break;
+		        endif;
+		endif;
+	loop;
+until(%@#playernum% < 8)   
+elseif(%YPOS% = 70)
+	baritone(cancel); 
+		STOP("checkhub")
+		stop("slayer")   
+		    wait(1)
+		    echo(/warp crypt)
+		            wait(1)
+		            exec("slayer.txt","slayer")
+		            exec("checkhub.txt","checkhub")
+		     
+		        endif;	         
+endif;
+wait(60)
+loop

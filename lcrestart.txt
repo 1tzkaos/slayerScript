@@ -1,0 +1,4 @@
+stop("lobbycheck")
+wait(1)
+exec("slayerlobbycheck.txt","lobbycheck")
+stop

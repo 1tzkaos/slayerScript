@@ -1,0 +1,30 @@
+wait(5)  
+do(1)
+setproperty(LABEL 258,"visible",1);
+foreach("teams");
+        strip(@&cmithril,"%TEAMPREFIX%%TEAMSUFFIX%");
+        ifmatches(%@&cmithril%,"Mithril: (.+)",@&mithril,1);
+    	@#mithrilinitial := regexreplace(@&mithril,"(?:,|\..+)");
+            
+                     
+        endif;
+    next
+loop
+
+do()
+    foreach("teams");
+        strip(@&cmithril,"%TEAMPREFIX%%TEAMSUFFIX%");
+        ifmatches(%@&cmithril%,"Mithril: (.+)",@&mithril1,1);
+    	@#mithrilcurrent := regexreplace(@&mithril1,"(?:,|\..+)");
+            //log(Initial: %@#mithrilinitial% Current: %@#mithrilcurrent%)
+            eval(@&diff,%@#mithrilcurrent%-%@#mithrilinitial%);
+            //log(%&diff%)
+            @#diff := %@&diff%
+            #hour := %&hour%
+            eval(@&perhour,%@#diff%/%@#seconds%)
+            //log(%&perhour%)
+            setlabel(LABEL 258, Mithril: %@#mithrilcurrent%)
+            setlabel(LABEL 259, Mithril Gained: %@&diff%)        
+        endif;
+    next
+loop

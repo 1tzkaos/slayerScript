@@ -1,0 +1,27 @@
+
+    	stop("rev")
+    	stop("slayer")
+    	inc(@#slayer)
+    	do()
+	    	slot(3)
+	    	wait(20t)
+	    	key(use)
+	    until(GUI = "GUICHEST")
+	    if(GUI = "GUICHEST")
+	    	wait(30t)
+	    	slotclick(13)
+	    	wait(30t)
+	    	slotclick(10)
+	    	wait(30t)
+	    	slotclick(14)
+	    	wait(30t)
+	    	slotclick(11)
+	    	wait(10t)
+	    	    if(GUI = "GUICHEST")
+	    			press(e)
+	    		endif;	    	
+	    	wait(20t)
+	    	exec("slayer.txt","slayer")
+	    	stop();
+	    endif;
+ 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://eq2online.net/dtd/properties.dtd">
+<properties>
+    <comment>Shared variables store for mod_Macros</comment>
+    <entry key="&amp;foraging">31</entry>
+    <entry key="&amp;start">2021-02-04 10:19:28</entry>
+    <entry key="&amp;combat">34</entry>
+    <entry key="&amp;current">2021-02-04 10:58:31</entry>
+    <entry key="&amp;cmithril"/>
+    <entry key="&amp;taming">31</entry>
+    <entry key="&amp;lastrestart">2021-02-04 10:18:44</entry>
+    <entry key="#slayer">19</entry>
+    <entry key="#xp_per_kill">0</entry>
+    <entry key="&amp;mining">27</entry>
+    <entry key="#playernum">1</entry>
+    <entry key="#total_to_next_level_decimals">0</entry>
+    <entry key="#current_level_xp_decimals">0</entry>
+    <entry key="#restarts">0</entry>
+    <entry key="&amp;farming">23</entry>
+    <entry key="#playernum1">24</entry>
+    <entry key="&amp;enchanting">26</entry>
+    <entry key="#zombie">710</entry>
+    <entry key="#total_to_next_level">0</entry>
+    <entry key="#current_level_xp">0</entry>
+    <entry key="#seconds">39</entry>
+</properties>

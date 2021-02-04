@@ -1,0 +1,76 @@
+do()
+IF(%YPOS%==70)
+    stop("slayer")
+    baritone(cancel);
+    playsound(custom.1111)
+    KEYUP(forward)
+    wait(1)
+    Do
+        stop("slayer")
+        wait(10t)
+        echo(/hub)
+        goto(-10,70,-68)
+        do()
+        if((%XPOS% < -9)&&(%ZPOS% < -66))
+            look(222,0)
+            wait(10t)
+            if(%HITID% = -1)
+                do()
+                key(use)
+                until(GUI = "GUICHEST")
+            endif; 
+
+                if(GUI = "GUICHEST")
+                    wait(10t)
+                    slotclick(50,RMB);
+                    wait(10t)
+                endif
+            echo(/warp crypt)
+                    wait(1)
+                
+                endif;
+    until(%YPOS% = 61) 
+    exec("slayer.txt","slayer")    
+ENDIF
+
+getslotitem(5,&names)
+IF(&names=="trapped_chest")
+    stop("slayer")
+    KEYUP(forward)
+    log(&3Hub Check&7 > &fWarping back to Skyblock)
+    wait(1)
+    Do
+        Echo(/play sb)
+        wait(10t)
+        getslotitem(5,&names)
+    Until(&names!="trapped_chest")
+
+    Do
+    stop("slayer")
+    wait(10t)
+    echo(/hub)
+    goto(-10,70,-68)
+    do()
+    if((%XPOS% < -9)&&(%ZPOS% < -66))
+        look(222,0)
+        wait(10t)
+        if(%HITID% = -1)
+            do()
+            key(use)
+            until(GUI = "GUICHEST")
+        endif; 
+
+            if(GUI = "GUICHEST")
+                wait(10t)
+                slotclick(50,RMB);
+                wait(10t)
+            endif
+        echo(/warp crypt)
+                wait(1)
+            
+            endif;
+    until(%YPOS% = 61)    
+    exec("slayer.txt","slayer")
+ENDIF
+
+loop

@@ -1,0 +1,77 @@
+
+&currentlocation = "Unknown"
+ForEach(teams)
+    STRIP(&joined,%TEAMPREFIX%%TEAMSUFFIX%);
+    Ifmatches(%&joined%,"Village");
+        &currentlocation = "Hub"
+    EndIf
+    Ifmatches(%&joined%,"Your Island");
+        &currentlocation = "Island"
+    EndIf
+    Ifmatches(%&joined%,"Hype:");
+        &currentlocation = "Lobby"
+    EndIf
+    Ifmatches(%&joined%,"Mystery Dust:");
+        &currentlocation = "Lobby"
+    EndIf
+Next
+If(%&currentlocation% == "Unknown")
+    log(&3Hub Check&7 > &fNot sure where you are!)
+    stop("rev")
+    stop("slayer")
+    stop("lobbycheck")
+    stop("bossslain")
+
+    echo(/l)
+    wait(1)
+    echo(/play sb)
+    wait(1)
+    echo(/warp hub)
+    wait(1)
+    exec("slayerlobbycheck.txt","lobbycheck")
+    exec("slcounter.txt","counter")
+elseif(%&currentlocation% == "Lobby")
+    log(&3Hub Check&7 > &fIn Hypixel Lobby!)
+    //Stopping all scripts that could possibly mess up the proccess of checking the lobbies. All of these scripts use baritone
+    //which would mess up the lobby check. Therefore we stop them and the restart them after we are in "hub"    
+    stop("rev")
+    stop("slayer")
+    stop("lobbycheck")
+    stop("bossslain")
+    echo(/play sb)
+    wait(1)   
+    echo(/warp hub)
+    wait(1)
+
+    exec("slayerlobbycheck.txt","lobbycheck")
+    exec("slcounter.txt","counter")
+elseif(%&currentlocation% == "Hub")
+    log(&3Hub Check&7 > &fIn hub!)  
+
+    //Stopping all scripts that could possibly mess up the proccess of checking the lobbies. All of these scripts use baritone
+    //which would mess up the lobby check. Therefore we stop them and the restart them after we are in "hub"
+    stop("rev")
+    stop("slayer")
+    stop("lobbycheck")
+    stop("bossslain")
+
+    wait(1)
+    exec("slayerlobbycheck.txt","lobbycheck")
+    exec("slcounter.txt","counter")
+elseif(%&currentlocation% == "Island")
+    log(&3Hub Check&7 > &fIn Your Island)  
+
+    //Stopping all scripts that could possibly mess up the proccess of checking the lobbies. All of these scripts use baritone
+    //which would mess up the lobby check. Therefore we stop them and the restart them after we are in "hub"
+    stop("rev")
+    stop("slayer")
+    stop("lobbycheck")
+    stop("bossslain")
+
+    wait(1)
+    echo(/warp hub)
+    wait(1)
+    log(&6Slayer Script > &fStarting Script)
+    exec("slayerlobbycheck.txt","lobbycheck")
+    exec("slcounter.txt","counter")
+Endif

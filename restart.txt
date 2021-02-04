@@ -1,0 +1,35 @@
+    	stop("rev")
+    	stop("slayer")
+    	do()
+	    	slot(3)
+	    	wait(10t)
+	    	key(use)
+	    until(GUI = "GUICHEST")
+	    if(GUI = "GUICHEST")
+	    	wait(10t)
+	    	slotclick(13)
+	    	wait(10t)
+	    endif;
+    	do()
+	    	slot(3)
+	    	wait(10t)
+	    	key(use)
+	    until(GUI = "GUICHEST")	
+	    if(GUI = "GUICHEST")    
+	    	slotclick(10)
+	    	wait(15t)
+	    	slotclick(14)
+	    	wait(15t)
+	    	slotclick(11)
+	 		wait(15t)
+	 	if(%YPOS% = 70)
+	 		echo(/warp crypt)
+	 		wait(20t)
+	    		exec("slayer.txt","slayer")
+	    		stop();
+	    else
+			exec("slayer.txt","slayer")	     
+			stop();   
+		endif;
+		
+	    endif;

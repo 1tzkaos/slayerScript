@@ -1,0 +1,40 @@
+log("&8[&7&ka&6Server&7&ka&8] &7Starting Slayer Script!")
+    setrequestheader("Content-Type","application/json");
+    setrequestheader("User-Agent","USER: %UUID%");
+
+    //&webhook_posturl  = "https://discord.com/api/webhooks/803189945128189952/NyWkVACGRf8kvPAC4tFdrIhJlsJhjASLIcMS8gTNkk9KNY6EV7LRd_6dYcvTXTiiwpsN";  //test server
+    &webhook_posturl  = "https://discord.com/api/webhooks/781211512097341451/PGl-h69I0mEESls-dufzJOptLyHoG20agpd2LP6mBbxCnX-FdgPCODjajKby2PI7Rf4e";  //main server
+    &webhook_username = "test";
+
+    &webhook_postdata = "{'content': null,'embeds': [{'title': '%PLAYER% Auto Slayer','url': 'https://sky.lea.moe/stats/%PLAYER%/','color': 16761344,'fields': [{'name': 'Script Started','value': '%DATE% %TIME%'},{'name': 'Stats:','value': 'Combat Level: %@&combat%\nMining Level: %@&mining%\nForaging Level: %@&foraging%\nFarming Level: %@&farming%\nEnchanting Level: %@&enchanting%\nTaming Level: %@&taming%','inline': true}],'footer': {'text': 'Dev: kaos#0001','icon_url': 'https://cdn.discordapp.com/attachments/776603087754231911/795015689525657600/mai_gif.gif'},'timestamp': '%DATE% %TIME%','thumbnail': {'url': 'https://crafatar.com/renders/body/%UUID%'}}]}";
+    &webhook_postdata = regexreplace(&webhook_postdata,"'","\"");
+    &response_data[]  = httppost(%&webhook_posturl%,%&webhook_postdata%,#response_code);
+    #response_size    = arraysize(&response_data[]);
+    log("&7Response code is: &d%#response_code%&7! Got a total of &e%#response_size%&7 lines in the response array.");
+    foreach(&response_data[],&response_line,#response_index);
+      log("&7  %#response_index%: &e%&response_line%&7.");
+    next;
+    log(" ");
+
+
+
+
+
+
+
+
+
+
+
+
+    
+set(@#slayer,0)
+set(@#restarts,0);  
+set(@#zombie,0);
+log("&8[&7&ka&6Server&7&ka&8] &7Checking hub...")
+exec("hardCheckHub.txt","HardCheckHub")
+exec("slayerwebhook.txt","webhook")
+
+stop
+
+

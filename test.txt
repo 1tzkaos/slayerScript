@@ -1,0 +1,11 @@
+foreach("teams");
+    strip(&text,"%TEAMPREFIX%%TEAMSUFFIX%");
+    ifmatches(%&text%,"Slayer Quest");
+    wait(1)
+        log(Slayer Quest in progress!);
+    else
+        wait(1)
+        log(No Slayer Quest in progress)
+    endif;
+    
+next;

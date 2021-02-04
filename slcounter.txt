@@ -1,0 +1,19 @@
+@&start = %DATE% %TIME%
+@#seconds = 0
+setproperty(LABEL 278,"visible",1);
+
+exec("slayercounter.txt","SlayerCounter")
+
+SETLABEL(LABEL 257, Running for 0 minutes)
+
+
+
+
+DO()
+  WAIT(60)
+  @#seconds = @#seconds + 1
+  @&current = %DATE% %TIME%
+  SETLABEL(LABEL 257, Running for %@#seconds% minutes)
+LOOP
+
+

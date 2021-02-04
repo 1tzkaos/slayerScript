@@ -1,0 +1,60 @@
+&lable = "&4Loading&7 > &f"
+log(%&lable%Starting failsafe2)
+#tickfailsafe = 20
+&mainscript = "netherstart.txt"
+@#failsafe = 1
+unsafe()
+
+#prevx = %XPOS%
+#prevy = %YPOS%
+#prevz = %ZPOS%
+#countstill = 0
+Do
+    #failcount = 0
+    foreach(running)
+        if(%MACRONAME% == "FAILSAFE")
+            if(%#failcount%==0)
+                #failcount = 1
+            Else
+                stop(%MACROID%)
+            Endif
+        endif
+    next
+
+    RANDOM(#num,5,7)
+    wait(%#num%)
+    if((%#prevx%>=%XPOS%-1)&&(%#prevx%<=%XPOS%+1)&&(%#prevz%>=%ZPOS%-1)&&(%#prevz%<=%ZPOS%+1)) 
+        #maptcha = 0
+        if(%@#pausingfail%==0)
+            #countstill = %#countstill% + 1
+        Endif
+    Else
+        #countstill = 0
+    Endif
+
+    #prevx = %XPOS%
+    #prevy = %YPOS%
+    #prevz = %ZPOS%
+
+    if(%#countstill%>=%#tickfailsafe%)
+        #z = %#tickfailsafe% * 120
+
+        Log(You haven't moved for around %#z% ticks!)
+
+        getSlotItem(1,&name)
+        log(Checking if maptcha is active!)
+
+        Log(Warping to lobby and restarting scripts.)
+        LOGTO(%PLAYER%.txt,%TIME%)
+        foreach(running)
+            if(%MACRONAME% != "FAILSAFE")
+                stop(%MACROID%)
+            endif
+        next
+
+        echo(/l)
+        exec(%&mainscript%,"main")
+        Break
+    Endif
+loop
+Endunsafe()
