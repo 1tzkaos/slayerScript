@@ -1,5 +1,6 @@
 <h1 align="center">README.md Hypixel Skyblock Slayer Script 👋</h1>
  
+ 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -29,3 +30,9 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 Iceshades#2451 | Helped with regular expressions as well as webhooks. Also helped with a lot of other problems I was facing.
 
 JTReddin#8648 | Moral Support :)
+
+# Questions
+
+Requirements: MVP+ rank (VIP coming soon)
+
+
