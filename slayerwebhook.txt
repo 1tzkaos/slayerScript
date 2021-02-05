@@ -1,5 +1,5 @@
 do()
-&url        = "https://api.hypixel.net/player?key=4e968874-ed5b-4363-985d-8968401cc7ed&name=%PLAYER%";
+&url        = "https://api.hypixel.net/player?key=%@&api%&name=%PLAYER%";
 &response   = httpget(%&url%,,,#response_code);
 &status     = jsonget(%&response%,"success");
 if(&status == "true");

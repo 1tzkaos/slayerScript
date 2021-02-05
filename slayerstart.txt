@@ -4,7 +4,13 @@
 
 //--------------------------------------------------------------------------------------------------
 
+// Set @&api to your hypixel api key
+// Use the command /api or /apinew to get your api key
 
+@&api = 4e968874-ed5b-4363-985d-8968401cc7ed
+
+
+//--------------------------------------------------------------------------------------------------
 
 //Change @&webhook_message to the message you want to send to your discord
 // Current webhook example: https://cdn.discordapp.com/attachments/784920430946287627/807032252798074890/webhookimage.PNG
