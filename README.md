@@ -7,7 +7,7 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Questions](#questions) 
- 
+- [License](#license)
  
 # Description
 This script uses Entity Iterator paired with baritone to find mobs, pathfind, and kill them. The script requires MVP+.
@@ -59,3 +59,6 @@ Requirements: MVP+ rank (VIP coming soon)
 
 The Script requires MVP+ ATM and VIP in the future due to a key feature only available to ranked members. The script uses priate hub lobbies for the lowest possible ditection rate. The script is not Watch Dog detected, so the only way of gettign banned is either by player or staff ie. Player sees you and reports you. Therefore private lobbies are used to lower the risk. The script also needs MVP+ for fastest transprtation as MVP+ has permission to use scrolls to Castle and Crypt Cave.
 
+# License
+
+- **NOT FOR COMMERCIAL USE**
