@@ -5,7 +5,7 @@
     <entry key="&amp;foraging">31</entry>
     <entry key="&amp;start">2021-02-05 05:01:38</entry>
     <entry key="&amp;combat">35</entry>
-    <entry key="&amp;current">2021-02-05 05:06:38</entry>
+    <entry key="&amp;current">2021-02-05 05:07:39</entry>
     <entry key="&amp;cmithril"/>
     <entry key="#slayerlevel">4</entry>
     <entry key="&amp;taming">32</entry>
@@ -28,5 +28,5 @@
     <entry key="#total_to_next_level">0</entry>
     <entry key="#current_level_xp">0</entry>
     <entry key="#playeramount">8</entry>
-    <entry key="#seconds">5</entry>
+    <entry key="#seconds">6</entry>
 </properties>
