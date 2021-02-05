@@ -34,7 +34,7 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 
 3 Different slayer modes: 
 - 0 = No slayers, just xp (Crypt Ghouls) **WORK IN PROGRESS**
-- 1 = Revenent Horrors (best xp)
+- 1 = Revenent Horrors (best xp) (240k-300k With god pot and Wolf)
 - 2 = Svens **WORK IN PROGRESS**
 
 4 Different Slayer Levels
