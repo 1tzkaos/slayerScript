@@ -22,7 +22,7 @@ I will make these files (requested by Iceshades)
 
 - add to "onChat" 
 
-```$${ifcontains(%CHATCLEAN%,"SLAYER QUEST FAILED!");exec("restart.txt","restart");endif;ifcontains(%CHATCLEAN%,"NICE! SLAYER BOSS SLAIN!");log("&8[&7&ka&2Server&7&ka&8] &7Boss Slain!");exec("bossslain.txt","Slain");endif;ifcontains(%CHATCLEAN%,"You are AFK. Move around to return from AFK.");log("&8[&7&ka&2Server&7&ka&8] &7You are AFK!");wait(5);look(0,50,0.2);key(attack);wait(1);endif;match("%CHATCLEAN%","\+(\d+)\s\w+\s\((\d+)\,(\d+)\.?\d?\/(\d+)\,(\d+)\)",{@#xp_per_kill,@#current_level_xp,@#current_level_xp_decimals,@#total_to_next_level,@#total_to_next_level_decimals});setlabel(LABEL 259,"&7XP per kill: &d%@#xp_per_kill%\n&7Current XP: &d%@#current_level_xp%,%@#current_level_xp_decimals%\n&7Total XP for next level: &d%@#total_to_next_level%,%@#total_to_next_level_decimals%00");}$$```
+```$${ifcontains(%CHATCLEAN%,"SLAYER QUEST FAILED!");exec("restart.txt","restart");endif;ifcontains(%CHATCLEAN%,"NICE! SLAYER BOSS SLAIN!");exec("bossslain.txt","Slain");endif;ifcontains(%CHATCLEAN%,"You are AFK. Move around to return from AFK.");log("&8[&7&ka&2Server&7&ka&8] &7You are AFK!");wait(5);look(0,50,0.2);key(attack);wait(1);endif;match("%CHATCLEAN%","\+(\d+)\s\w+\s\((\d+)\,(\d+)\.?\d?\/(\d+)\,(\d+)\)",{@#xp_per_kill,@#current_level_xp,@#current_level_xp_decimals,@#total_to_next_level,@#total_to_next_level_decimals});setlabel(LABEL 259,"&7XP per kill: &d%@#xp_per_kill%\n&7Current XP: &d%@#current_level_xp%,%@#current_level_xp_decimals%\n&7Total XP for next level: &d%@#total_to_next_level%,%@#total_to_next_level_decimals%00");}$$```
 
 # Usage
 💻  
