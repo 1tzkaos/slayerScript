@@ -1,148 +1,314 @@
-
-
-
-
-
-
-
 slot(1)
-do
-            ifinvisfull();
-                echo(/bz)
-                wait(15t)
-                slotclick(38)
-                wait(15t)
-                slotclick(11)
-                wait(5t)
-                slotclick(11)
-                if(GUI = "GUICHEST")
-                    wait(10t)
-                    press(e)
-                    wait(20t)
-                endif;
-            endif;    
-unsafe;
-foreach("entities");
-    &text=%ENTITYNAME%  
-    strip(&name,%&text%)
-    if(GUI = "GUICHEST")
-        wait(10t)
-        press(e)
-    endif;
-    if(GUI = "GUIINVENTORY")
-        wait(10t)
-        press(e)
-    endif;
+//Rev Slayer
+//-----------------------------------------------------------------------------
 
-    ifcontains(%&name%,"Revenant Horror")
-        ifcontains(%&name%," 0/")
-        else
+if(%@#slayermode% == 1)
+    do
+                ifinvisfull();
+                    echo(/bz)
+                    wait(15t)
+                    slotclick(38)
+                    wait(15t)
+                    slotclick(11)
+                    wait(5t)
+                    slotclick(11)
+                    if(GUI = "GUICHEST")
+                        wait(10t)
+                        press(e)
+                        wait(20t)
+                    endif;
+                endif;    
+    unsafe;
+    foreach("entities");
+        &text=%ENTITYNAME%  
+        strip(&name,%&text%)
+        if(GUI = "GUICHEST")
+            wait(10t)
+            press(e)
+        endif;
+        if(GUI = "GUIINVENTORY")
+            wait(10t)
+            press(e)
+        endif;
+
+        ifcontains(%&name%,"Revenant Horror")
+            ifcontains(%&name%," 0/")
+            else
+                
+                exec("rev.txt","rev")
+                baritone(cancel);
+                stop("slayer")
+            break()
+
+            endif
+        endif
+
+        ifcontains(%&name%,"Crypt ghoul")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif
+        ifcontains(%&name%,"Golden Ghoul")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif    
+    ifcontains(%&name%,"Revenant Champion")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
             
-            exec("rev.txt","rev")
-            baritone(cancel);
-            stop("slayer")
-        break()
+            break()
 
-        endif
-    endif
-
-    ifcontains(%&name%,"Crypt ghoul")
+            endif
+        endif        
+    ifcontains(%&name%,"Deformed Revenant")
         ifcontains(%&name%," 0/")
-        else
-            #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
-            split(".",%ENTITYDY%,&string[])
-            REPLACE(&string[0],"-")
-            #hdistance:=%&string[0]%
-            if(#hdistance<10)
-                if(#distance<10)
-                    #yaw=%ENTITYYAWFROMPLAYER%
-                    #pitch=%ENTITYPITCHFROMPLAYER%
-                    inc(#pitch,12)
-                    look(%#yaw%,%#pitch%)
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
 
-                endif 
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            
+            break()
+
             endif
-        #ypos=%ENTITYYPOS%-2
-        goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
-        break()
-
         endif
+    next;
+    endunsafe
+    &hit=%HITNAME%
+    strip(&hit,%&hit%)
+    if(%HITNAME%="Zombie")
+        key(attack)
+        inc(@#zombie,1);
+        log("&8[&7&ka&6Server&7&ka&8] &7Killed: %@#zombie% zombies")
+        wait(5t)
+
     endif
-    ifcontains(%&name%,"Golden Ghoul")
+    loop
+
+
+//Sven Slayer
+//-----------------------------------------------------------------------------
+
+elseif(%@#slayermode% == 2)
+    do
+                ifinvisfull();
+                    echo(/bz)
+                    wait(15t)
+                    slotclick(38)
+                    wait(15t)
+                    slotclick(11)
+                    wait(5t)
+                    slotclick(11)
+                    if(GUI = "GUICHEST")
+                        wait(10t)
+                        press(e)
+                        wait(20t)
+                    endif;
+                endif;    
+    unsafe;
+    foreach("entities");
+        &text=%ENTITYNAME%  
+        strip(&name,%&text%)
+        if(GUI = "GUICHEST")
+            wait(10t)
+            press(e)
+        endif;
+        if(GUI = "GUIINVENTORY")
+            wait(10t)
+            press(e)
+        endif;
+
+        ifcontains(%&name%,"Revenant Horror")
+            ifcontains(%&name%," 0/")
+            else
+                
+                exec("rev.txt","rev")
+                baritone(cancel);
+                stop("slayer")
+            break()
+
+            endif
+        endif
+
+        ifcontains(%&name%,"Crypt ghoul")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif
+        ifcontains(%&name%,"Golden Ghoul")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif
+        ifcontains(%&name%,"Revenant Sycophant")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif        
+    ifcontains(%&name%,"Revenant Champion")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            
+            break()
+
+            endif
+        endif        
+    ifcontains(%&name%,"Deformed Revenant")
         ifcontains(%&name%," 0/")
-        else
-            #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
-            split(".",%ENTITYDY%,&string[])
-            REPLACE(&string[0],"-")
-            #hdistance:=%&string[0]%
-            if(#hdistance<10)
-                if(#distance<10)
-                    #yaw=%ENTITYYAWFROMPLAYER%
-                    #pitch=%ENTITYPITCHFROMPLAYER%
-                    inc(#pitch,12)
-                    look(%#yaw%,%#pitch%)
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
 
-                endif 
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+            
+            break()
+
             endif
-        #ypos=%ENTITYYPOS%-2
-        goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
-        break()
-
         endif
-    endif    
-ifcontains(%&name%,"Revenant Champion")
-        ifcontains(%&name%," 0/")
-        else
-            #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
-            split(".",%ENTITYDY%,&string[])
-            REPLACE(&string[0],"-")
-            #hdistance:=%&string[0]%
-            if(#hdistance<10)
-                if(#distance<10)
-                    #yaw=%ENTITYYAWFROMPLAYER%
-                    #pitch=%ENTITYPITCHFROMPLAYER%
-                    inc(#pitch,12)
-                    look(%#yaw%,%#pitch%)
+    next;
+    endunsafe
+    &hit=%HITNAME%
+    strip(&hit,%&hit%)
+    if(%HITNAME%="Zombie")
+        key(attack)
+        inc(@#zombie,1);
+        log("&8[&7&ka&6Server&7&ka&8] &7Killed: %@#zombie% zombies")
+        wait(5t)
 
-                endif 
-            endif
-        #ypos=%ENTITYYPOS%-2
-        
-        break()
-
-        endif
-    endif        
-ifcontains(%&name%,"Deformed Revenant")
-    ifcontains(%&name%," 0/")
-        else
-            #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
-            split(".",%ENTITYDY%,&string[])
-            REPLACE(&string[0],"-")
-            #hdistance:=%&string[0]%
-            if(#hdistance<10)
-                if(#distance<10)
-                    #yaw=%ENTITYYAWFROMPLAYER%
-                    #pitch=%ENTITYPITCHFROMPLAYER%
-                    inc(#pitch,12)
-                    look(%#yaw%,%#pitch%)
-
-                endif 
-            endif
-        #ypos=%ENTITYYPOS%-2
-        
-        break()
-
-        endif
     endif
-next;
-endunsafe
-&hit=%HITNAME%
-strip(&hit,%&hit%)
-if(%HITNAME%="Zombie")
-    key(attack)
-    inc(@#zombie,1);
-    log("&8[&7&ka&6Server&7&ka&8] &7Killed: %@#zombie% zombies")
-    wait(5t)
-
+    loop
 endif
-loop

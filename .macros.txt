@@ -246,7 +246,7 @@ script.warn.permissions.enabled=0
 #
 
 # KEY_0
-Macro[11].Macro=$${$$<bossslain.txt>}$$
+Macro[11].Macro=$${$$<test2.txt>}$$
 
 # KEY_MINUS
 Macro[12].Macro=$${$$<slayer.txt>}$$

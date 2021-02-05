@@ -70,6 +70,7 @@ IF(&names=="trapped_chest")
             
             endif;
     until(%YPOS% = 61)    
+    
     exec("slayer.txt","slayer")
 ENDIF
 

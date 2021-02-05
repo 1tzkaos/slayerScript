@@ -161,18 +161,18 @@
         </template>
         <!-- KEY_LEFT -->
         <template id="203">
-            <int key="hdistance">1</int>
-            <int key="ypos">46</int>
-            <int key="distance">0</int>
+            <int key="hdistance">2</int>
+            <int key="ypos">104</int>
+            <int key="distance">188</int>
             <int key="dist">7</int>
             <int key="pitch">0</int>
-            <int key="yaw">254</int>
-            <string key="hit">Zombie</string>
-            <string key="name">Armor Stand</string>
-            <string key="text"/>
+            <int key="yaw">0</int>
+            <string key="hit">Diorite</string>
+            <string key="name">[Lv15] Wolf 250/250❤</string>
+            <string key="text">§8[§7Lv15§8] §cWolf §a250§f/§a250§c❤</string>
             <array key="string" type="string">
-                <element pos="0">1</element>
-                <element pos="1">59375</element>
+                <element pos="0">2</element>
+                <element pos="1">0</element>
             </array>
         </template>
         <!-- EVENT_ONJOINGAME -->
@@ -189,8 +189,8 @@
         </template>
         <!-- EVENT_ONBETTERCHAT -->
         <template id="1020">
-            <string key="chat_json">{'strikethrough':false,'extra':[{'strikethrough':false,'text':'✆ Hello?'},{'strikethrough':false,'text':' '},{'strikethrough':false,'clickEvent':{'action':'run_command','value':'/cb 9dd6a1aa-225c-47fc-9b91-8eb8cff3706a'},'hoverEvent':{'action':'show_text','value':{'bold':false,'italic':false,'underlined':false,'strikethrough':false,'obfuscated':false,'color':'yellow','text':'Click!'}},'text':'[OPEN MENU]'}],'text':''}</string>
-            <string key="match">/cb 9dd6a1aa-225c-47fc-9b91-8eb8cff3706a</string>
+            <string key="chat_json">{'strikethrough':false,'extra':[{'strikethrough':false,'text':'✆ You again? What do you want this time?'},{'strikethrough':false,'text':' '},{'strikethrough':false,'clickEvent':{'action':'run_command','value':'/cb e568b5fa-e229-4be5-a597-f4b69663a6cf'},'hoverEvent':{'action':'show_text','value':{'bold':false,'italic':false,'underlined':false,'strikethrough':false,'obfuscated':false,'color':'yellow','text':'Click!'}},'text':'[OPEN MENU]'}],'text':''}</string>
+            <string key="match">/cb e568b5fa-e229-4be5-a597-f4b69663a6cf</string>
         </template>
     </config>
 </variables>

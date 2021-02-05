@@ -1,43 +1,83 @@
 
+if(@#slayermode == 1)
+    do
+    unsafe;
+    foreach("entities");
+        &text=%ENTITYNAME%  
+        strip(&name,%&text%)
 
-do
-unsafe;
-foreach("entities");
-    &text=%ENTITYNAME%  
-    strip(&name,%&text%)
+    ifcontains(%&name%,"Revenant Horror")
+        ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<20)
+                    if(#distance<20)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
 
-ifcontains(%&name%,"Revenant Horror")
-    ifcontains(%&name%," 0/")
-        else
-            #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
-            split(".",%ENTITYDY%,&string[])
-            REPLACE(&string[0],"-")
-            #hdistance:=%&string[0]%
-            if(#hdistance<20)
-                if(#distance<20)
-                    #yaw=%ENTITYYAWFROMPLAYER%
-                    #pitch=%ENTITYPITCHFROMPLAYER%
-                    inc(#pitch,12)
-                    look(%#yaw%,%#pitch%)
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-2
+           
+            break()
 
-                endif 
             endif
-        #ypos=%ENTITYYPOS%-2
-       
-        break()
-
         endif
+    next;
+    endunsafe
+    &hit=%HITNAME%
+    strip(&hit,%&hit%)
+    if(%HITNAME%="Zombie")
+        key(attack)
+        wait(3t)
     endif
-next;
-endunsafe
-&hit=%HITNAME%
-strip(&hit,%&hit%)
-if(%HITNAME%="Zombie")
-    key(attack)
-    wait(3t)
+
+
+    loop
+elseif(@#slayermode == 2)
+    do
+    unsafe;
+    foreach("entities");
+        &text=%ENTITYNAME%  
+        strip(&name,%&text%)
+
+    ifcontains(%&name%,"Sven Packmaster")
+        ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<20)
+                    if(#distance<20)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%-1
+           
+            break()
+
+            endif
+        endif
+    next;
+    endunsafe
+    &hit=%HITNAME%
+    strip(&hit,%&hit%)
+    if(%HITNAME%="Zombie")
+        key(attack)
+        wait(3t)
+    endif
+
+
+    loop
 endif
-
-
-loop
-
 

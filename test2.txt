@@ -1,0 +1,140 @@
+do
+                ifinvisfull();
+                    echo(/bz)
+                    wait(15t)
+                    slotclick(38)
+                    wait(15t)
+                    slotclick(11)
+                    wait(5t)
+                    slotclick(11)
+                    if(GUI = "GUICHEST")
+                        wait(10t)
+                        press(e)
+                        wait(20t)
+                    endif;
+                endif;    
+    unsafe;
+    foreach("entities");
+        &text=%ENTITYNAME%  
+        strip(&name,%&text%)
+        if(GUI = "GUICHEST")
+            wait(10t)
+            press(e)
+        endif;
+        if(GUI = "GUIINVENTORY")
+            wait(10t)
+            press(e)
+        endif;
+
+        ifcontains(%&name%,"Revenant Horror")
+            ifcontains(%&name%," 0/")
+            else
+                
+                exec("rev.txt","rev")
+                baritone(cancel);
+                stop("slayer")
+            break()
+
+            endif
+        endif
+
+        ifcontains(%&name%,"Wolf")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%-1
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif
+        ifcontains(%&name%,"Old Wolf")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%
+            goto(%ENTITYXPOS%,%#ypos%,%ENTITYZPOS%)
+            break()
+
+            endif
+        endif    
+    ifcontains(%&name%,"Sven Follower")
+            ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%
+            
+            break()
+
+            endif
+        endif        
+    ifcontains(%&name%,"Sven Alpha")
+        ifcontains(%&name%," 0/")
+            else
+                #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
+                split(".",%ENTITYDY%,&string[])
+                REPLACE(&string[0],"-")
+                #hdistance:=%&string[0]%
+                if(#hdistance<10)
+                    if(#distance<10)
+                        #yaw=%ENTITYYAWFROMPLAYER%
+                        #pitch=%ENTITYPITCHFROMPLAYER%
+                        inc(#pitch,12)
+                        look(%#yaw%,%#pitch%)
+
+                    endif 
+                endif
+            #ypos=%ENTITYYPOS%
+            
+            break()
+
+            endif
+        endif
+    next;
+    endunsafe
+    &hit=%HITNAME%
+    strip(&hit,%&hit%)
+    if(%HITNAME%="Wolf")
+        key(attack)
+        inc(@#wolf,1);
+        log("&8[&7&ka&6Server&7&ka&8] &7Killed: %@#wolf% wolves")
+        wait(5t)
+
+    endif
+    loop

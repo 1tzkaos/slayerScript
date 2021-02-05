@@ -1,4 +1,4 @@
-
+if(@#slayermode == 1)
     	stop("rev")
     	stop("slayer")
     	inc(@#slayer)
@@ -13,7 +13,15 @@
 	    	wait(30t)
 	    	slotclick(10)
 	    	wait(30t)
-	    	slotclick(14)
+	    	if(@#slayerlevel == 1)
+	    		slotclick(11)
+	    	elseif(@#slayerlevel == 2)
+	    		slotclick(12)
+	    	elseif(@#slayerlevel == 3)
+	    		slotclick(13)
+	    	elseif(@#slayerlevel == 4)
+	    		slotclick(14)
+	    	endif;
 	    	wait(30t)
 	    	slotclick(11)
 	    	wait(10t)
@@ -24,4 +32,38 @@
 	    	exec("slayer.txt","slayer")
 	    	stop();
 	    endif;
- 
+elseif(@#slayermode == 2)
+    	stop("rev")
+    	stop("slayer")
+    	inc(@#slayer)
+    	do()
+	    	slot(3)
+	    	wait(20t)
+	    	key(use)
+	    until(GUI = "GUICHEST")
+	    if(GUI = "GUICHEST")
+	    	wait(30t)
+	    	slotclick(13)
+	    	wait(30t)
+	    	slotclick(12)
+	    	wait(30t)
+	    	if(@#slayerlevel == 1)
+	    		slotclick(11)
+	    	elseif(@#slayerlevel == 2)
+	    		slotclick(12)
+	    	elseif(@#slayerlevel == 3)
+	    		slotclick(13)
+	    	elseif(@#slayerlevel == 4)
+	    		slotclick(14)
+	    	endif;
+	    	wait(30t)
+	    	slotclick(11)
+	    	wait(10t)
+	    	    if(GUI = "GUICHEST")
+	    			press(e)
+	    		endif;	    	
+	    	wait(20t)
+	    	exec("slayer.txt","slayer")
+	    	stop();
+	    endif;
+endif

@@ -1,15 +1,13 @@
 
 do()
-log("&8[&7&ka&bLobby Check&7&ka&8] &7Checking lobby...")
 
-set(@#playernum,0)
+#playernum = 0
 foreach(players)
-	inc(@#playernum)  
+	inc(#playernum)  
 next;
-wait(3)
-log("&8[&7&ka&bLobby Check&7&ka&8] &7%@#playernum% players in lobby")
-if(%@#playernum% > 8)
-baritone(cancel);
+log("&8[&7&ka&bLobby Check&7&ka&8] &7Checking lobby...")
+log("&8[&7&ka&bLobby Check&7&ka&8] &7%#playernum% players in lobby")
+if(%#playernum% > %@#playeramount%)
 STOP("checkhub")
 stop("slayer")
 do()
@@ -20,7 +18,6 @@ do()
 	stop("slayer")
 	baritone(cancel);
 	exec("anticombat.txt","anticombat")
-	baritone(cancel);
 	wait(10t)
 	do()
 		stop("slayer")
@@ -48,41 +45,49 @@ do()
 		            wait(10t)
 		            slotclick(50,RMB);
 		            wait(10t)
-				    wait(1)
-				    echo(/warp crypt)
+				    //wait(1)
+				    //echo(/warp crypt)
 				    stop("slayer")
 				    wait(1)		            
 		        endif
 
 		            
-						set(@#playernum1,0)
+						set(#playernum1,0)
 						foreach(players)
-							inc(@#playernum1)  
+							inc(#playernum1)  
 						next;
+						log(%#playernum1%)
 						wait(5)
-						if(%@#playernum1% > 8)
+						if(%#playernum1% > %@#playeramount%)
 							exec("lcrestart.txt","restart")
 							stop();
-						else
-				            exec("slayer.txt","slayer")
-				            exec("checkhub.txt","checkhub")
+						elseif(%#playernum1% < %@#playeramount%)
+							exec("lcrestart.txt","restart")
+							stop();					
 				        endif;
-		            break;
+		            
 		        endif;
 		endif;
 	loop;
-until(%@#playernum% < 8)   
-elseif(%YPOS% = 70)
+until(%#playernum% < %@#playeramount%) 
+wait(10)  
+elseif((%#playernum% < %@#playeramount%)&&(%YPOS% = 70))
+
 	baritone(cancel); 
 		STOP("checkhub")
 		stop("slayer")   
 		    wait(1)
-		    echo(/warp crypt)
-		            wait(1)
-		            exec("slayer.txt","slayer")
-		            exec("checkhub.txt","checkhub")
-		     
-		        endif;	         
+		    if(@#slayermode == 1)
+		    	echo(/warp crypt)
+		    	wait(1)
+		        exec("slayer.txt","slayer")
+		        exec("checkhub.txt","checkhub")
+		    elseif(@#slayermode == 2)
+		    	echo(/warp castle)
+		    	wait(1)
+		        exec("slayer.txt","slayer")
+		        exec("checkhub.txt","checkhub")		     
+		    endif;	         
 endif;
 wait(60)
 loop
