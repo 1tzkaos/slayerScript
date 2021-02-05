@@ -61,6 +61,16 @@ The Script requires MVP+ ATM and VIP in the future due to a key feature only ava
 
 # License
 
-- **NOT FOR COMMERCIAL USE**
+Anyone is free to copy, modify, publish, use, compile, or
+distribute this software, either in source code form or as a compiled
+binary, for any NON-COMMERCIAL purpose, and by any
+means.
 
-This means to selling the script AT ALL. It is Strictly prohibited to sell the script.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+STRICTLY PROHIBITED TO USE FOR COMMERCIASL USE
