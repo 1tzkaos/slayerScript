@@ -57,6 +57,7 @@ set(@#slayer,0)
 set(@#restarts,0);  
 set(@#zombie,0);
 set(@#wolf,0);
+wait(1)
 log("&8[&7&ka&6Server&7&ka&8] &7Checking hub...")
 exec("hardCheckHub.txt","HardCheckHub")
 exec("slayerwebhook.txt","webhook")

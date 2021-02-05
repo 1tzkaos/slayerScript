@@ -27,7 +27,11 @@ next;
     @&webhook_message = regexreplace(@&webhook_message,"'","\"");
     &response_data[]  = httppost(%@&webhook_url%,%@&webhook_message%,#response_code);
     #response_size    = arraysize(&response_data[]);
-    log("&7Response code is: &d%#response_code%&7! Got a total of &e%#response_size%&7 unsent webhooks.");
+    if(%#response_code% == 204)
+        log("&8[&7Webhook&8] &f> &aSuccess!");
+    elseif(%response_code% == -1)
+       log("&8[&7Webhook&8] &f> &c&lFailed!")
+    endif;
     foreach(&response_data[],&response_line,#response_index);
       log("&7  %#response_index%: &e%&response_line%&7.");
     next;
