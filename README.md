@@ -62,3 +62,5 @@ The Script requires MVP+ ATM and VIP in the future due to a key feature only ava
 # License
 
 - **NOT FOR COMMERCIAL USE**
+
+This means to selling the script AT ALL. It is Strictly prohibited to sell the script.
