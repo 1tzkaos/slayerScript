@@ -22,9 +22,9 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 ## Settings
 
 3 Different slayer modes: 
-- 0 = No slayers, just xp (Crypt Ghouls) **WORK IN PROGRESS
+- 0 = No slayers, just xp (Crypt Ghouls) **WORK IN PROGRESS**
 - 1 = Revenent Horrors (best xp)
-- 2 = Svens **WORK IN PROGRESS
+- 2 = Svens **WORK IN PROGRESS**
 
 4 Different Slayer Levels
 - 1 = Level 1
