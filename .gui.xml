@@ -18,7 +18,7 @@
                 <border>0</border>
                 <colour>#919191</colour>
                 <shadow>1</shadow>
-                <text> Running for 0 minutes</text>
+                <text> Running for 121 minutes</text>
                 <visible>1</visible>
             </gc:label>
             <gc:label id="258" name="LABEL 259" x="0" y="4">
@@ -28,7 +28,7 @@
                 <border>0</border>
                 <colour>#00FF00</colour>
                 <shadow>1</shadow>
-                <text>&amp;7XP per kill: &amp;d0\n&amp;7Current XP: &amp;d0,0\n&amp;7Total XP for next level: &amp;d0,000</text>
+                <text>&amp;7XP per log: &amp;d0\n&amp;7Current XP: &amp;d0,0\n&amp;7Total XP for next level: &amp;d0,000</text>
                 <visible>1</visible>
             </gc:label>
         </gc:controls>

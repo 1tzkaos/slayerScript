@@ -1,3 +1,45 @@
+$${
+ifcontains(%CHATCLEAN%,"SLAYER QUEST FAILED!");
+    	stop("rev")
+    	stop("slayer")
+    	do()
+	    	slot(3)
+	    	wait(10t)
+	    	key(use)
+	    until(GUI = "GUICHEST")
+	    if(GUI = "GUICHEST")
+	    	wait(10t)
+	    	slotclick(13)
+	    	wait(10t)
+	    endif;
+    	do()
+	    	slot(3)
+	    	wait(10t)
+	    	key(use)
+	    until(GUI = "GUICHEST")	
+	    if(GUI = "GUICHEST")    
+	    	slotclick(10)
+	    	wait(15t)
+	    	slotclick(14)
+	    	wait(15t)
+	    	slotclick(11)
+	 		wait(15t)
+	 	if(%YPOS% = 70)
+	 		echo(/warp crypt)
+	 		wait(20t)
+	    		exec("slayer.txt","slayer")
+	    		stop();
+	    else
+			exec("slayer.txt","slayer")	     
+			stop();   
+		endif;
+		
+	    endif;	
+endif;
+
+ifcontains(%CHATCLEAN%,"NICE! SLAYER BOSS SLAIN!");
+  log("&8[&7&ka&2Server&7&ka&8] &7Boss Slain!")
+wait(20t)
 if(@#slayermode == 1)
     	stop("rev")
     	stop("slayer")
@@ -67,3 +109,17 @@ elseif(@#slayermode == 2)
 	    	stop();
 	    endif;
 endif
+endif;
+
+ifcontains(%CHATCLEAN%,"You are AFK. Move around to return from AFK.");
+  log("&8[&7&ka&2Server&7&ka&8] &7You are AFK!");
+  wait(5);look(0,50,0.2);
+  key(attack);
+  wait(1);
+endif;
+
+match("%CHATCLEAN%","\+(\d+)\s\w+\s\((\d+)\,(\d+)\.?\d?\/(\d+)\,(\d+)\)",{@#xp_per_log,@#current_level_xp,@#current_level_xp_decimals,@#total_to_next_level,@#total_to_next_level_decimals});
+
+setlabel(LABEL 259,"&7XP per log: &d%@#xp_per_log%\n&7Current XP: &d%@#current_level_xp%,%@#current_level_xp_decimals%\n&7Total XP for next level: &d%@#total_to_next_level%,%@#total_to_next_level_decimals%00");
+
+}$$

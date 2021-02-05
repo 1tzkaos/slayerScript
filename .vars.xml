@@ -189,8 +189,8 @@
         </template>
         <!-- EVENT_ONBETTERCHAT -->
         <template id="1020">
-            <string key="chat_json">{'strikethrough':false,'extra':[{'strikethrough':false,'text':'✆ How does a lobster answer? Shello!'},{'strikethrough':false,'text':' '},{'strikethrough':false,'clickEvent':{'action':'run_command','value':'/cb f459842f-22e1-4b26-8302-168163090e51'},'hoverEvent':{'action':'show_text','value':{'bold':false,'italic':false,'underlined':false,'strikethrough':false,'obfuscated':false,'color':'yellow','text':'Click!'}},'text':'[OPEN MENU]'}],'text':''}</string>
-            <string key="match">/cb f459842f-22e1-4b26-8302-168163090e51</string>
+            <string key="chat_json">{'strikethrough':false,'extra':[{'strikethrough':false,'text':'✆ Hello?'},{'strikethrough':false,'text':' '},{'strikethrough':false,'clickEvent':{'action':'run_command','value':'/cb 0277fbdf-7091-4d33-8ab3-05ade66199c9'},'hoverEvent':{'action':'show_text','value':{'bold':false,'italic':false,'underlined':false,'strikethrough':false,'obfuscated':false,'color':'yellow','text':'Click!'}},'text':'[OPEN MENU]'}],'text':''}</string>
+            <string key="match">/cb 0277fbdf-7091-4d33-8ab3-05ade66199c9</string>
         </template>
     </config>
 </variables>
