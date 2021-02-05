@@ -1,6 +1,6 @@
 
 //Make @&webhook_url your discord webhook url
-@&webhook_url  = "https://discord.com/api/webhooks/781211512097341451/PGl-h69I0mEESls-dufzJOptLyHoG20agpd2LP6mBbxCnX-FdgPCODjajKby2PI7Rf4e"; 
+@&webhook_url  = "WEBHOOK_URL"; 
 
 //--------------------------------------------------------------------------------------------------
 
