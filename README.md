@@ -26,6 +26,9 @@ I will make these files (requested by Iceshades)
 
 # Usage
 💻  
+
+- Have Swrod in 1st slot, and Madox Box in 3rd slot
+
 Change variables in 'SLAYERSTART.txt' to your desired settings.
 ## Settings
 
