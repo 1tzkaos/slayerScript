@@ -34,7 +34,7 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 
 Webhook
 
-[!image](https://cdn.discordapp.com/attachments/784920430946287627/807032252798074890/webhookimage.PNG)
+![image](https://cdn.discordapp.com/attachments/784920430946287627/807032252798074890/webhookimage.PNG)
 
 # Contributing
 Iceshades#2451 | Helped with regular expressions as well as webhooks. Also helped with a lot of other problems I was facing.
