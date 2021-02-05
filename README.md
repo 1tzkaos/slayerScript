@@ -1,4 +1,4 @@
-<h1 align="center">README.md Hypixel Skyblock Slayer Script 👋</h1>
+<h1 align="center">Hypixel Skyblock Slayer Script 👋</h1>
  
  
 ## Table of Contents
@@ -25,6 +25,12 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 - 0 = No slayers, just xp (Crypt Ghouls)
 - 1 = Revenent Horrors (best xp)
 - 2 = Svens
+
+4 Different Slayer Levels
+- 1 = Level 1
+- 2 = Level 2 
+- 3 = Level 3
+- 4 = Level 4
 
 # Contributing
 Iceshades#2451 | Helped with regular expressions as well as webhooks. Also helped with a lot of other problems I was facing.
