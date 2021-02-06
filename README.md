@@ -14,6 +14,7 @@ This script uses Entity Iterator paired with baritone to find mobs, pathfind, an
 # Installation
 💾 
 Download and unzip the folder, place the 'macros' folder into an instance.
+Download Baritone api forge for 1.12.2: https://github.com/cabaletta/baritone/releases?after=v1.2.13 and put it into your mods folder
 
 I will make these files (requested by Iceshades)
 - add to "onBetterChat"
