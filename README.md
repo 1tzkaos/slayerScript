@@ -16,7 +16,7 @@
 - VIP capatability
 - XP/hour calculator
 - Sven Slayer mode
-
+- Setting to configure sword and Maddox slot
 
 # Description
 This script is made for MacroMod 1.12.2. It uses Entity Iterator paired with baritone to find mobs, pathfind, and kill them. The script requires MVP+ (VIP mode coming soon).
