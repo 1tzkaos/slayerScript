@@ -6,6 +6,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Features/Settings](#features/settings)
 - [Contributing](#contributing)
 - [Questions](#questions) 
 - [License](#license)
@@ -40,7 +41,7 @@ I will make these files (requested by Iceshades)
 - Have Sword in 1st slot, and Madox Box in 3rd slot
 
 Change variables in 'SLAYERSTART.txt' to your desired settings.
-## Settings
+# Features/Settings
 
 3 Different slayer modes: 
 - 0 = No slayers, just xp (Crypt Ghouls) **WORK IN PROGRESS**
