@@ -18,7 +18,13 @@ if(@#slayermode == 1)
                         #yaw=%ENTITYYAWFROMPLAYER%
                         #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
-                        look(%#yaw%,%#pitch%)
+                        if(@#legitmode == 0)
+                            look(%#yaw%,%#pitch%)
+                        elseif(@#legitmode == 1)
+                            look(%#yaw%,%#pitch%,0.1)
+                        elseif(@#legitmode == 2)
+                            look(%#yaw%,%#pitch%,0.2)
+                        endif;
 
                     endif 
                 endif
@@ -58,7 +64,13 @@ elseif(@#slayermode == 2)
                         #yaw=%ENTITYYAWFROMPLAYER%
                         #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
-                        look(%#yaw%,%#pitch%)
+                        if(@#legitmode == 0)
+                            look(%#yaw%,%#pitch%)
+                        elseif(@#legitmode == 1)
+                            look(%#yaw%,%#pitch%,0.1)
+                        elseif(@#legitmode == 2)
+                            look(%#yaw%,%#pitch%,0.2)
+                        endif;
 
                     endif 
                 endif

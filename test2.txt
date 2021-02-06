@@ -26,7 +26,7 @@ do
             press(e)
         endif;
 
-        ifcontains(%&name%,"Revenant Horror")
+        ifcontains(%&name%,"Sven Packmaster")
             ifcontains(%&name%," 0/")
             else
                 
@@ -48,7 +48,7 @@ do
                 if(#hdistance<10)
                     if(#distance<10)
                         #yaw=%ENTITYYAWFROMPLAYER%
-                        #pitch=%ENTITYPITCHFROMPLAYER%-1
+                        #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
                         look(%#yaw%,%#pitch%)
 

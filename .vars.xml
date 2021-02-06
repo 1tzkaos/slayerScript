@@ -161,18 +161,18 @@
         </template>
         <!-- KEY_LEFT -->
         <template id="203">
-            <int key="hdistance">2</int>
-            <int key="ypos">104</int>
-            <int key="distance">188</int>
+            <int key="hdistance">1</int>
+            <int key="ypos">92</int>
+            <int key="distance">179</int>
             <int key="dist">7</int>
             <int key="pitch">0</int>
             <int key="yaw">0</int>
-            <string key="hit">Diorite</string>
-            <string key="name">[Lv15] Wolf 250/250❤</string>
-            <string key="text">§8[§7Lv15§8] §cWolf §a250§f/§a250§c❤</string>
+            <string key="hit">Stone Slab</string>
+            <string key="name">Wolf</string>
+            <string key="text">Wolf</string>
             <array key="string" type="string">
-                <element pos="0">2</element>
-                <element pos="1">0</element>
+                <element pos="0">1</element>
+                <element pos="1">0625</element>
             </array>
         </template>
         <!-- EVENT_ONJOINGAME -->
@@ -189,8 +189,8 @@
         </template>
         <!-- EVENT_ONBETTERCHAT -->
         <template id="1020">
-            <string key="chat_json">{'strikethrough':false,'extra':[{'strikethrough':false,'text':'✆ Hello?'},{'strikethrough':false,'text':' '},{'strikethrough':false,'clickEvent':{'action':'run_command','value':'/cb 0277fbdf-7091-4d33-8ab3-05ade66199c9'},'hoverEvent':{'action':'show_text','value':{'bold':false,'italic':false,'underlined':false,'strikethrough':false,'obfuscated':false,'color':'yellow','text':'Click!'}},'text':'[OPEN MENU]'}],'text':''}</string>
-            <string key="match">/cb 0277fbdf-7091-4d33-8ab3-05ade66199c9</string>
+            <string key="chat_json">{'strikethrough':false,'extra':[{'strikethrough':false,'text':'✆ Hello?'},{'strikethrough':false,'text':' '},{'strikethrough':false,'clickEvent':{'action':'run_command','value':'/cb ea9611a4-2b10-4b05-a41e-45f4d5bb9945'},'hoverEvent':{'action':'show_text','value':{'bold':false,'italic':false,'underlined':false,'strikethrough':false,'obfuscated':false,'color':'yellow','text':'Click!'}},'text':'[OPEN MENU]'}],'text':''}</string>
+            <string key="match">/cb ea9611a4-2b10-4b05-a41e-45f4d5bb9945</string>
         </template>
     </config>
 </variables>

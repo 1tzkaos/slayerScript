@@ -22,11 +22,9 @@ do()
 	do()
 		stop("slayer")
 		echo(/hub)
-		baritone(cancel);
 		wait(3)
 	until(%YPOS% = 70)
 	stop("anticombat")
-	baritone(cancel);
 		goto(-10,70,-68)
 
 	next;
@@ -45,8 +43,6 @@ do()
 		            wait(10t)
 		            slotclick(50,RMB);
 		            wait(10t)
-				    //wait(1)
-				    //echo(/warp crypt)
 				    stop("slayer")
 				    wait(1)		            
 		        endif

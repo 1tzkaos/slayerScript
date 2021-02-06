@@ -26,10 +26,6 @@ if(%@#slayermode% == 1)
             wait(10t)
             press(e)
         endif;
-        if(GUI = "GUIINVENTORY")
-            wait(10t)
-            press(e)
-        endif;
 
         ifcontains(%&name%,"Revenant Horror")
             ifcontains(%&name%," 0/")
@@ -55,8 +51,13 @@ if(%@#slayermode% == 1)
                         #yaw=%ENTITYYAWFROMPLAYER%
                         #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
-                        look(%#yaw%,%#pitch%)
-
+                        if(@#legitmode == 0)
+                            look(%#yaw%,%#pitch%)
+                        elseif(@#legitmode == 1)
+                            look(%#yaw%,%#pitch%,0.1)
+                        elseif(@#legitmode == 2)
+                            look(%#yaw%,%#pitch%,0.2)
+                        endif;
                     endif 
                 endif
             #ypos=%ENTITYYPOS%-2
@@ -77,7 +78,13 @@ if(%@#slayermode% == 1)
                         #yaw=%ENTITYYAWFROMPLAYER%
                         #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
-                        look(%#yaw%,%#pitch%)
+                        if(@#legitmode == 0)
+                            look(%#yaw%,%#pitch%)
+                        elseif(@#legitmode == 1)
+                            look(%#yaw%,%#pitch%,0.1)
+                        elseif(@#legitmode == 2)
+                            look(%#yaw%,%#pitch%,0.2)
+                        endif;
 
                     endif 
                 endif
@@ -89,7 +96,7 @@ if(%@#slayermode% == 1)
         endif    
     ifcontains(%&name%,"Revenant Champion")
             ifcontains(%&name%," 0/")
-            else
+else
                 #yaw = CALCYAWTO(%ENTITYXPOS%,%ENTITYZPOS%,,#distance)
                 split(".",%ENTITYDY%,&string[])
                 REPLACE(&string[0],"-")
@@ -99,7 +106,13 @@ if(%@#slayermode% == 1)
                         #yaw=%ENTITYYAWFROMPLAYER%
                         #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
-                        look(%#yaw%,%#pitch%)
+                        if(@#legitmode == 0)
+                            look(%#yaw%,%#pitch%)
+                        elseif(@#legitmode == 1)
+                            look(%#yaw%,%#pitch%,0.1)
+                        elseif(@#legitmode == 2)
+                            look(%#yaw%,%#pitch%,0.2)
+                        endif;
 
                     endif 
                 endif
@@ -108,7 +121,7 @@ if(%@#slayermode% == 1)
             break()
 
             endif
-        endif        
+        endif       
     ifcontains(%&name%,"Deformed Revenant")
         ifcontains(%&name%," 0/")
             else
@@ -121,7 +134,13 @@ if(%@#slayermode% == 1)
                         #yaw=%ENTITYYAWFROMPLAYER%
                         #pitch=%ENTITYPITCHFROMPLAYER%
                         inc(#pitch,12)
-                        look(%#yaw%,%#pitch%)
+                        if(@#legitmode == 0)
+                            look(%#yaw%,%#pitch%)
+                        elseif(@#legitmode == 1)
+                            look(%#yaw%,%#pitch%,0.1)
+                        elseif(@#legitmode == 2)
+                            look(%#yaw%,%#pitch%,0.2)
+                        endif;
 
                     endif 
                 endif
@@ -169,10 +188,6 @@ elseif(%@#slayermode% == 2)
         &text=%ENTITYNAME%  
         strip(&name,%&text%)
         if(GUI = "GUICHEST")
-            wait(10t)
-            press(e)
-        endif;
-        if(GUI = "GUIINVENTORY")
             wait(10t)
             press(e)
         endif;
@@ -303,10 +318,10 @@ elseif(%@#slayermode% == 2)
     endunsafe
     &hit=%HITNAME%
     strip(&hit,%&hit%)
-    if(%HITNAME%="Zombie")
+    if(%HITNAME%="wolf")
         key(attack)
-        inc(@#zombie,1);
-        log("&8[&7&ka&6Server&7&ka&8] &7Killed: %@#zombie% zombies")
+        inc(@#wolf,1);
+        log("&8[&7&ka&6Server&7&ka&8] &7Killed: %@#wolf% zombies")
         wait(5t)
 
     endif

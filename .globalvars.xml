@@ -3,32 +3,33 @@
 <properties>
     <comment>Shared variables store for mod_Macros</comment>
     <entry key="&amp;foraging">31</entry>
-    <entry key="&amp;start">2021-02-05 14:18:25</entry>
+    <entry key="&amp;start">2021-02-06 01:35:22</entry>
     <entry key="&amp;combat">36</entry>
-    <entry key="&amp;current">2021-02-05 14:20:25</entry>
+    <entry key="&amp;current">2021-02-06 01:39:22</entry>
     <entry key="&amp;cmithril"/>
     <entry key="#slayerlevel">4</entry>
     <entry key="&amp;api">4e968874-ed5b-4363-985d-8968401cc7ed</entry>
     <entry key="&amp;taming">32</entry>
-    <entry key="#xp_per_log">0</entry>
     <entry key="#slayermode">1</entry>
-    <entry key="&amp;webhook_message">{"content": null,"embeds": [{"title": "Ertigo Auto Slayer","url": "https://sky.lea.moe/stats/Ertigo/","color": 16761344,"fields": [{"name": "Stats:","value": "Combat Level: 36\nMining Level: 27\nForaging Level: 31\nFarming Level: 23\nEnchanting Level: 29\nTaming Level: 32","inline": true},{"name": "Kills:","value": "Zombies Killed: 0\nSlayer Kills: 0","inline": true},{"name": "Elapsed Time:","value": "Running for 121 minutes\n\nStarted: 2021-02-05 12:11:32\nCurrent: 2021-02-05 14:12:40"},{"name": "Restarts:","value": "Restarts: 0\nLast Restart: 2021-02-05 12:14:18"}],"footer": {"text": "Dev: kaos#0001","icon_url": "https://cdn.discordapp.com/attachments/776603087754231911/795015689525657600/mai_gif.gif"},"timestamp": "2021-02-05 14:18:20","thumbnail": {"url": "https://crafatar.com/renders/body/b9b5c304-67b3-4c7f-a34a-d7c68e40fb32"}}]}</entry>
-    <entry key="&amp;lastrestart">2021-02-05 14:18:27</entry>
-    <entry key="#wolf">0</entry>
-    <entry key="#slayer">1</entry>
+    <entry key="#xp_per_log">0</entry>
+    <entry key="&amp;lastrestart">2021-02-06 00:24:50</entry>
+    <entry key="&amp;webhook_message">{"content": null,"embeds": [{"title": "Ertigo Auto Slayer","url": "https://sky.lea.moe/stats/Ertigo/","color": 16761344,"fields": [{"name": "Stats:","value": "Combat Level: 36\nMining Level: 27\nForaging Level: 31\nFarming Level: 23\nEnchanting Level: 31\nTaming Level: 32","inline": true},{"name": "Kills:","value": "Zombies Killed: 53\nSlayer Kills: 1","inline": true},{"name": "Elapsed Time:","value": "Running for 4 minutes\n\nStarted: 2021-02-06 01:30:21\nCurrent: 2021-02-06 01:34:21"},{"name": "Restarts:","value": "Restarts: 0\nLast Restart: 2021-02-06 00:24:50"}],"footer": {"text": "Dev: kaos#0001","icon_url": "https://cdn.discordapp.com/attachments/776603087754231911/795015689525657600/mai_gif.gif"},"timestamp": "2021-02-06 01:34:57","thumbnail": {"url": "https://crafatar.com/renders/body/b9b5c304-67b3-4c7f-a34a-d7c68e40fb32"}}]}</entry>
+    <entry key="#slayer">3</entry>
     <entry key="#xp_per_kill">0</entry>
+    <entry key="#wolf">0</entry>
     <entry key="&amp;webhook_url">https://discord.com/api/webhooks/781211512097341451/PGl-h69I0mEESls-dufzJOptLyHoG20agpd2LP6mBbxCnX-FdgPCODjajKby2PI7Rf4e</entry>
     <entry key="&amp;mining">27</entry>
     <entry key="#playernum">22</entry>
-    <entry key="#restarts">1</entry>
-    <entry key="#total_to_next_level_decimals">0</entry>
     <entry key="#current_level_xp_decimals">0</entry>
+    <entry key="#total_to_next_level_decimals">0</entry>
+    <entry key="#restarts">0</entry>
+    <entry key="#legitmode">1</entry>
     <entry key="&amp;farming">23</entry>
     <entry key="#playernum1">3</entry>
-    <entry key="&amp;enchanting">29</entry>
-    <entry key="#zombie">46</entry>
+    <entry key="&amp;enchanting">31</entry>
+    <entry key="#zombie">79</entry>
     <entry key="#total_to_next_level">0</entry>
     <entry key="#current_level_xp">0</entry>
-    <entry key="#playeramount">8</entry>
-    <entry key="#seconds">2</entry>
+    <entry key="#playeramount">3</entry>
+    <entry key="#seconds">4</entry>
 </properties>

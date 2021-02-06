@@ -1,13 +1,12 @@
 
 //Make @&webhook_url your discord webhook url
-@&webhook_url  = "WEBHOOK_URL"; 
+ 
 //--------------------------------------------------------------------------------------------------
 
 // Set @&api to your hypixel api key
 // Use the command /api or /apinew to get your api key
 
 
-@&api = "API_KEY"
 
 
 //--------------------------------------------------------------------------------------------------
@@ -41,10 +40,20 @@
 
 //--------------------------------------------------------------------------------------------------
 
-// @#playeramount is the amount of player in a lobby/hub. Anything below 8 seems to be safe.
-// Values of 1 and 2 dont work very well as Watch Dog players occasionally join.
+// Legit mode makes the camera movements smoother. This may make the xp/hour lower, but will lower the chances of being reported
+// Legit Mode:
+// 0 = Legit Mode off (Most Efficient)
+// 1 = Semi-Legit Mode on (Slow)
+// 2 = Full Legit mode on (Very slow and Inefficient)
 
-@#playeramount = 8
+@#legitmode = 0
+
+//--------------------------------------------------------------------------------------------------
+
+// @#playeramount is the amount of player in a lobby/hub. Anything below 8 seems to be safe.
+// Values of 1 and 2 dont work as Watch Dog players occasionally join. 3 seems to work VERY well.
+
+@#playeramount = 3
 
 //--------------------------------------------------------------------------------------------------
 //                        Nothing needs to be changed below this point
