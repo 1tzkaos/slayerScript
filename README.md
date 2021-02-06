@@ -2,18 +2,28 @@
  
  
 ## Table of Contents
+- [Coming Soon](#coming_soon)
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Questions](#questions) 
 - [License](#license)
- 
+
+# Coming Soon
+
+- Legit mode
+- VIP capatability
+- XP/hour calculator
+- Sven Slayer mode
+- Setting to configure sword and Maddox slot
+
 # Description
-This script uses Entity Iterator paired with baritone to find mobs, pathfind, and kill them. The script requires MVP+.
+This script is made for MacroMod 1.12.2. It uses Entity Iterator paired with baritone to find mobs, pathfind, and kill them. The script requires MVP+ (VIP mode coming soon).
 # Installation
 💾 
 Download and unzip the folder, place the 'macros' folder into an instance.
+Download Baritone api forge for 1.12.2: https://github.com/cabaletta/baritone/releases?after=v1.2.13 and put it into your mods folder
 
 I will make these files (requested by Iceshades)
 - add to "onBetterChat"
