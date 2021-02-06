@@ -53,6 +53,12 @@ Change variables in 'SLAYERSTART.txt' to your desired settings.
 - 3 = Level 3
 - 4 = Level 4
 
+Legit mode makes the camera movements smoother. This may make the xp/hour lower, but will lower the chances of being reported
+Legit Mode:
+- 0 = Legit Mode off (Most Efficient)
+- 1 = Semi-Legit Mode on (Slow)
+- 2 = Full Legit mode on (Very slow and Inefficient)
+
 Webhook
 
 ![image](https://cdn.discordapp.com/attachments/784920430946287627/807032252798074890/webhookimage.PNG)
