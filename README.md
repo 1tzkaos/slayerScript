@@ -3,7 +3,7 @@
  
 ## Table of Contents
 - [Description](#description)
-- [Coming Soon](#coming soon)
+- [Coming Soon](#comingsoon)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
