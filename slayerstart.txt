@@ -1,12 +1,14 @@
 
-//Make @&webhook_url your discord webhook url
- 
+//Make @&webhook_url your discord webhook url. Place URL inbetween ""
+
+@&webhook_url = "WEBHOOK_URL"
+
 //--------------------------------------------------------------------------------------------------
 
-// Set @&api to your hypixel api key
+// Set @&api to your hypixel api key. Place KEY inbetween ""
 // Use the command /api or /apinew to get your api key
 
-
+@&api = "API_KEY"
 
 
 //--------------------------------------------------------------------------------------------------
