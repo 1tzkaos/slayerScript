@@ -2,7 +2,7 @@
  
  
 ## Table of Contents
-- [Coming Soon](#coming soon)
+- [Coming Soon](#comingsoon)
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
