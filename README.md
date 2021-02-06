@@ -13,7 +13,6 @@
 
 # Coming Soon
 
-- Legit mode
 - VIP capatability
 - XP/hour calculator
 - Sven Slayer mode
