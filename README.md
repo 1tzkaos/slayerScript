@@ -3,12 +3,21 @@
  
 ## Table of Contents
 - [Description](#description)
+- [Coming Soon](#coming soon)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Questions](#questions) 
 - [License](#license)
- 
+
+# Coming Soon
+
+- Legit mode
+- VIP capatability
+- XP/hour calculator
+- Sven Slayer mode
+
+
 # Description
 This script is made for MacroMod 1.12.2. It uses Entity Iterator paired with baritone to find mobs, pathfind, and kill them. The script requires MVP+ (VIP mode coming soon).
 # Installation
