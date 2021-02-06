@@ -2,8 +2,8 @@
  
  
 ## Table of Contents
+- [Coming Soon](#coming soon)
 - [Description](#description)
-- [Coming Soon](#comingsoon)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
