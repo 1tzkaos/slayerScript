@@ -2,11 +2,11 @@
  
  
 ## Table of Contents
-- [Coming Soon](#coming_soon)
+- [Coming Soon](#comingsoon)
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features/Settings](#features/settings)
+- [Features/Settings](#featuressettings)
 - [Contributing](#contributing)
 - [Questions](#questions) 
 - [License](#license)
